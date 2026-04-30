@@ -404,7 +404,7 @@ public class HSQLDBGroupRepository implements GroupRepository {
 
 	@Override
 	public GroupAdminData getAdminFaulty(int groupId, String address) throws DataException {
-		try (ResultSet resultSet = this.repository.checkedExecute("SELECT admin, reference FROM GroupAdmins WHERE group_id = ? AND admin = ?", groupId)) {
+		try (ResultSet resultSet = this.repository.checkedExecute("SELECT admin, reference FROM GroupAdmins WHERE group_id = ?", groupId)) {
 			if (resultSet == null)
 				return null;
 
@@ -445,7 +445,7 @@ public class HSQLDBGroupRepository implements GroupRepository {
 	public List<GroupAdminData> getGroupAdmins(int groupId, Integer limit, Integer offset, Boolean reverse) throws DataException {
 		StringBuilder sql = new StringBuilder(256);
 
-		sql.append("SELECT admin, reference FROM GroupAdmins WHERE group_id = ? AND admin = ? ORDER BY admin");
+		sql.append("SELECT admin, reference FROM GroupAdmins WHERE group_id = ? ORDER BY admin");
 
 		if (reverse != null && reverse)
 			sql.append(" DESC");
