@@ -95,7 +95,8 @@ public class BlockChain {
 		adminQueryFixHeight,
 		multipleNamesPerAccountHeight,
 		mintedBlocksAdjustmentRemovalHeight,
-		atValidateHeight
+		atValidateHeight,
+		groupFeeHeight
 	}
 
     // V5.5 Default List of Historic Triggers
@@ -709,6 +710,10 @@ public class BlockChain {
 
 	public int getAtValidateHeight() {
 		return this.featureTriggers.get(FeatureTrigger.atValidateHeight.name()).intValue();
+	}
+
+	public int getGroupFeeHeight() {
+		return this.featureTriggers.get(FeatureTrigger.groupFeeHeight.name()).intValue();
 	}
 
 	// More complex getters for aspects that change by height or timestamp

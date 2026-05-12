@@ -117,7 +117,8 @@
 		"adminQueryFixHeight": 9999999999999,
 		"multipleNamesPerAccountHeight": 10,
 		"mintedBlocksAdjustmentRemovalHeight": 27,
-		"atValidateHeight": 9999999999999
+		"atValidateHeight": 9999999999999,
+		"groupFeeHeight": 10
 	},
 	"genesisInfo": {
 		"version": 4,
